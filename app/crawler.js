@@ -17,9 +17,7 @@ const webpage = "https://victualia.sodexo-velum.de/victualia/menuplan.html?date=
 
 console.log("Visiting page " + webpage + "\n\n");
 request(webpage, (err, res, body) => {
-  if(err) {
-    console.log("Error: " + err);
-  }
+  if(err) return console.error("Error: " + err)
   // Check status code (200 is HTTP OK)
   console.log("Status code: " + res.statusCode + "\n\n");
   if(res.statusCode === 200) {
@@ -31,8 +29,12 @@ request(webpage, (err, res, body) => {
     const vegetarisch = plan.match(/^Vegetarisch.*\n.*/gm).toString()
     const msg = suppe + "\n\n" + tagessalat + "\n\n" + hauptgaenge + "\n\n" + vegetarisch
 
-    slack.send(msg)
+    slack.send(msg).then((res) => {
+      console.log("Send message to Slack")
+    }).catch((err) => {
+      console.error("Could not send message to Slack")
+    })
 
-    console.log(msg)
+    //console.log(msg)
   }
 });
