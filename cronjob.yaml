@@ -1,0 +1,27 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: lunch-cronjob
+  namespace: default
+spec:
+  schedule: "0 9 * * 1-6" # 10am, Mon to Fri
+  concurrencyPolicy: Forbid # either allow|forbid|replace
+  successfulJobsHistoryLimit: 2
+  failedJobsHistoryLimit: 2
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: OnFailure
+          containers:
+            - name: lunch-cronjob
+              image: registry.hq.blockchain-consulting.net:5000/genesis-dining-bot:latest
+              env:
+                - name: SLACKCHANNEL
+                  value: 'tobefilledin'
+                - name: SLACKWEBHOOK
+                  value: 'tobefilledin'
+                - name: SLACKUSER
+                  value: 'tobefilledin'
+          imagePullSecrets:
+            - name: regcred

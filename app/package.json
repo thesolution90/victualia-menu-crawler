@@ -1,0 +1,18 @@
+{
+  "name": "foodcrawler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "crawler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node crawler.js"
+  },
+  "author": "TheSolution",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "remove-blank-lines": "^1.1.1",
+    "request": "^2.88.0",
+    "slack-webhook": "^1.0.0"
+  }
+}
