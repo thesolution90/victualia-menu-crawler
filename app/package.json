@@ -14,5 +14,8 @@
     "remove-blank-lines": "^1.1.1",
     "request": "^2.88.0",
     "slack-webhook": "^1.0.0"
+  },
+  "devDependencies": {
+    "standard": "^12.0.1"
   }
 }
