@@ -15,7 +15,7 @@ spec:
           restartPolicy: OnFailure
           containers:
             - name: lunch-cronjob
-              image: registry.hq.blockchain-consulting.net:5000/genesis-dining-bot:latest
+              image: linktoyourdockerimage
               env:
                 - name: SLACKCHANNEL
                   value: 'tobefilledin'
