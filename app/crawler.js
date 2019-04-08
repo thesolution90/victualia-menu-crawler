@@ -36,5 +36,7 @@ request(webpage, (err, res, body) => {
     })
 
     //console.log(msg)
+  } else {
+    console.error("Page did not return a HTTP 200")
   }
 });
