@@ -1,4 +1,4 @@
-# Food webcrawler for Victualia
+# Manu webcrawler for Victualia
 
 ## Running in docker
 
@@ -18,7 +18,7 @@ docker run --rm -dit <yourcontainername>
 
 ## Kubernetes cronjob
 
-* Please ensure you habe set your environment variables and build the docker images before
+* Please ensure you have set your environment variables and build the docker images before
 
 * Apply K8s configuration
 
@@ -28,4 +28,4 @@ kubectl apply -f cronjob.yaml
 
 ## Author
 
-* **TheSolution** - \<christopher.becker@bcc.gmbh\>
+* **TheSolution**
