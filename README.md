@@ -1,4 +1,4 @@
-# Manu webcrawler for Victualia
+# Menu webcrawler for Victualia
 
 ## Running in docker
 
