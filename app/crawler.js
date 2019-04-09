@@ -15,11 +15,11 @@ const month = parseInt(new Date(Date.now()).getMonth()) + 1
 const date = new Date(Date.now()).getDate() + '.' + month + '.' + new Date(Date.now()).getFullYear()
 const webpage = 'https://victualia.sodexo-velum.de/victualia/menuplan.html?date=' + date
 
-console.log('Visiting page ' + webpage + '\n\n')
+console.log('Visiting page ' + webpage)
 request(webpage, (err, res, body) => {
   if (err) return console.error('Error: ' + err)
   // Check status code (200 is HTTP OK)
-  console.log('Status code: ' + res.statusCode + '\n\n')
+  console.log('Status code: ' + res.statusCode)
   if (res.statusCode === 200) {
     const $ = cheerio.load(body)
     const plan = removeEmptyLines($.text().replace(/(^[ \t]*\n)/gm, '').replace(/(^[\s+].*)/gm, ''))
