@@ -15,7 +15,7 @@ spec:
           restartPolicy: OnFailure
           containers:
             - name: lunch-cronjob
-              image: linktoyourdockerimage
+              image: thesolution90/victualia-menu-crawler:latest
               env:
                 - name: SLACKCHANNEL
                   value: 'tobefilledin'

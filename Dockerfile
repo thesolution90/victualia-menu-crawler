@@ -1,10 +1,8 @@
 FROM node:alpine
 
-ENV SLACKCHANNEL=tobefilledin
-ENV SLACKWEBHOOK=tobefilledin
-ENV SLACKUSER=tobefilledin
-
 COPY . .
 WORKDIR /app
+
+RUN npm i
 
 CMD [ "npm", "run", "start" ]

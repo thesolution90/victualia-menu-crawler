@@ -7,13 +7,7 @@
 * Build the docker container via 
 
 ```plain
-docker build -t <yourcontainername> .
-```
-
-* Run the container via
-
-```plain
-docker run --rm -dit <yourcontainername>
+docker-compose up
 ```
 
 ## Kubernetes cronjob

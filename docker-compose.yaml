@@ -1,0 +1,5 @@
+version: '3'
+services:
+  crawler:
+    image: 'thesolution90/victualia-menu-crawler:latest'
+    env_file: .env
