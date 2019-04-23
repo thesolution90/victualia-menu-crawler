@@ -23,5 +23,3 @@ spec:
                   value: 'tobefilledin'
                 - name: SLACKUSER
                   value: 'tobefilledin'
-          imagePullSecrets:
-            - name: regcred
