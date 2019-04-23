@@ -4,6 +4,10 @@ Dockerhub status
 
 [![](https://images.microbadger.com/badges/version/thesolution90/victualia-menu-crawler.svg)](https://microbadger.com/images/thesolution90/victualia-menu-crawler "Get your own version badge on microbadger.com")  [![](https://images.microbadger.com/badges/image/thesolution90/victualia-menu-crawler.svg)](https://microbadger.com/images/thesolution90/victualia-menu-crawler "Get your own image badge on microbadger.com")
 
+
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
+
 ------
 
 ## Running in docker
