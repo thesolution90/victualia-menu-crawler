@@ -23,10 +23,10 @@ request(webpage, (err, res, body) => {
   if (res.statusCode === 200) {
     const $ = cheerio.load(body)
     const plan = removeEmptyLines($.text().replace(/(^[ \t]*\n)/gm, '').replace(/(^[\s+].*)/gm, ''))
-    const suppe = plan.match(/^Suppe\n.*/gm).toString()
-    const tagessalat = plan.match(/^Tagessalat.*\n.*/gm).toString()
-    const hauptgaenge = plan.match(/^Hauptgänge.*\n.*\n.*/gm).toString()
-    const vegetarisch = plan.match(/^Vegetarisch.*\n.*/gm).toString()
+    const suppe = "*"+plan.match(/^Suppe\n.*/gm).toString().replace(/\n/, ":*\n")
+    const tagessalat = "*"+plan.match(/^Tagessalat.*\n.*/gm).toString().replace(/\n/, ":*\n")
+    const hauptgaenge = "*"+plan.match(/^Hauptgänge.*\n.*\n.*/gm).toString().replace(/\n/, ":*\n").replace(/\n/g, '\n• ')
+    const vegetarisch = "*"+plan.match(/^Vegetarisch.*\n.*/gm).toString().replace(/\n/, ":*\n")
     const msg = suppe + '\n\n' + tagessalat + '\n\n' + hauptgaenge + '\n\n' + vegetarisch
 
     slack.send(msg).then((res) => {
