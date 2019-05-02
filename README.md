@@ -8,9 +8,9 @@ Dockerhub status
 
 ## Running in docker
 
-* Please ensure you set your environment variables before
+* Please ensure you set your environment variables before in the docker-compose.yaml file
 
-* Build the docker container via 
+* Run the docker container via
 
 ```plain
 docker-compose up
@@ -18,7 +18,7 @@ docker-compose up
 
 ## Kubernetes cronjob
 
-* Please ensure you have set your environment variables and build the docker images before
+* Please ensure you have set your environment variables in the cronjob.yaml file:
 
 * Apply K8s configuration
 

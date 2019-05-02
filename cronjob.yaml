@@ -4,7 +4,7 @@ metadata:
   name: lunch-cronjob
   namespace: default
 spec:
-  schedule: "0 9 * * 1-6" # 10am, Mon to Fri
+  schedule: "0 8 * * 1-6" # 10am, Mon to Fri
   concurrencyPolicy: Forbid # either allow|forbid|replace
   successfulJobsHistoryLimit: 2
   failedJobsHistoryLimit: 2
@@ -18,8 +18,12 @@ spec:
               image: thesolution90/victualia-menu-crawler:latest
               env:
                 - name: SLACKCHANNEL
-                  value: 'tobefilledin'
+                  value: 'someslackchannel'
                 - name: SLACKWEBHOOK
-                  value: 'tobefilledin'
+                  value: 'someslackwebhook'
                 - name: SLACKUSER
-                  value: 'tobefilledin'
+                  value: 'someslackuser'
+          dnsPolicy: "None"
+          dnsConfig:
+            nameservers:
+              - 8.8.8.8
